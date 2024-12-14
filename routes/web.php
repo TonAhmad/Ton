@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,18 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return 'Hello, Laravel!';
-});
+//HomeController
+Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/hello', function () {
-    return 'JANGAN SALAH PASANGAN';
-});
+Route::get('/about', [HomeController::class, 'about']);
 
-Route::get('/about', function () {
-    return 'Ini adalah halaman tentang Laravel';
-});
+//UserController
+Route::get('/users', [UserController::class, 'index']);
 
-Route::get('/home', function () {
-    return 'Ini adalah halaman Home!';
-});
+//ProductController
+Route::get('/products', [ProductController::class, 'index']);
+
+Route::get('/products/{id}', [ProductController::class, 'show']);
+
+Route::get('/products/create', [ProductController::class, 'create']);
