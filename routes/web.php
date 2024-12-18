@@ -19,14 +19,14 @@ use App\Http\Controllers\ProductController;
 //HomeController
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/about', [HomeController::class, 'about']);
+// Route::get('/about', [HomeController::class, 'about']);
 
-//UserController
-Route::get('/users', [UserController::class, 'index']);
+// //UserController
+// Route::get('/users', [UserController::class, 'index']);
 
-//ProductController
-Route::get('/products', [ProductController::class, 'index']);
+// //ProductController
+// Route::get('/products', [ProductController::class, 'index']);
 
-Route::get('/products/{id}', [ProductController::class, 'show']);
+// Route::get('/products/{id}', [ProductController::class, 'show']);
 
-Route::get('/products/create', [ProductController::class, 'create']);
+// Route::get('/products/create', [ProductController::class, 'create']);
